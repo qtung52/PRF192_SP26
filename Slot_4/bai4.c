@@ -6,7 +6,8 @@ int main() {
 	printf("Nhap a, b: ");
 	scanf("%d,%d", &a, &b);
 	printf("Nhap phep toan:");
-	scanf(" %c", &phepToan);
+	fflush(stdin);	//tránh bị lưu enter vào 'char' hoặc có nghĩa là xóa vùng đệm
+	scanf("%c", &phepToan);
 	if(phepToan == '/'){
 		if(b == 0) {
 			printf("Khong the chia cho 0");
