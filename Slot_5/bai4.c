@@ -7,12 +7,12 @@ int main() {
 	scanf("%d", &soKwh);
 	if(soKwh <= 100) {
 		money = soKwh * 950;
-	} else if(soKwh > 100 && soKwh <= 150) {
-		money = soKwh * 1250;
-	} else if(soKwh > 150 && soKwh <= 200) {
-		money = soKwh * 1350;
+	} else if(soKwh <= 150) {
+		money = 100 * 950 + (soKwh - 100) * 1250;
+	} else if(soKwh <= 200) {
+		money = 100 * 950 + 150 * 1250 + (soKwh - 150) * 1350;
 	} else{
-		money = soKwh * 1550;
+		money = 100 * 950 + 150 * 1250 + 200 * 1350 + (soKwh - 200) * 1550;
 	}
 	printf("So tien phai tra la: %d", money);
 	return 0;
