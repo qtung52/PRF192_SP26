@@ -7,7 +7,7 @@ int main() {
 	
 	scanf("%d, %d", &so1, &so2);
 	fflush(stdin);
-	scanf("%c", &phepTinh);
+	scanf(" %c", &phepTinh);
 	
 	switch(phepTinh) {
 		case '+':
