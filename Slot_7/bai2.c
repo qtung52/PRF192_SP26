@@ -38,6 +38,7 @@ int main() {
 			return 0;
 	}
 	
+	
 	printf("Phep tinh: %d %c %d = %.2f", so1, phepTinh, so2, kq);
 	return 0;
 }
