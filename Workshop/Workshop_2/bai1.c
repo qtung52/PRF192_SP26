@@ -11,7 +11,7 @@ int main() {
 	
 	ketQua = sqrt(n);
 	
-	printf("%.2f", ketQua);
+	printf("Can bac hai cua %.2f la %.2f", n, ketQua);
 	
 	return 0;
 }

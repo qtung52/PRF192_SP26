@@ -4,17 +4,18 @@
 int main() {
 	float n;
 	int count = 1;
+	float ketQua;
 	
 	while(1) {
 		printf("Nhap so thu %d: ", count);
 		while(scanf("%f", &n) != 1 || n <= 0) {
 			printf("Nhap lai so thu %d: ", count);
-			fflush(stdin);
+			while(getchar() != '\n');
 		}
 		
-		float kq = sqrt(n);
+		ketQua = sqrt(n);
 		
-		printf("Can bac hai la: %.2f\n", kq);
+		printf("Can bac hai la: %.2f\n", ketQua);
 		count ++;
 		if(count == 6) break;
 	}

@@ -2,11 +2,13 @@
 
 int main() {
 	int a, b, soBiChia, soChia;
+	
 	printf("Nhap hai so a va b: ");
-	if(scanf("%d %d", &a, &b) != 2) {
-		printf("Nhap sai!");
-		return 0;
+	while(scanf("%d %d", &a, &b) != 2) {
+		printf("Nhap sai! Nhap lai hai so a va b: ");
+		while(getchar() != '\n');
 	}
+	
 	//Đổi số âm sang số dương
 	int newA = (a < 0) ? -a : a;
 	int newB = (b < 0) ? -b : b;
@@ -21,5 +23,6 @@ int main() {
 	}
 	
 	printf("UCLN cua %d va %d la %d", a, b, soBiChia);
+	
 	return 0;
 }

@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-	long long soDu = 10000000;		//10trieu
+	long long soDu = 1000000;		//1trieu
 	int chon;
 	long long soTienRut;
 	printf("==================================\n");
-	printf("        ---Banking menu---\n");
+	printf("          ---ATM menu---\n");
 	printf("==================================\n");
 	
 	while(1) {
@@ -18,7 +18,6 @@ int main() {
 		if(scanf("%d", &chon) != 1 || (chon != 1 && chon != 2)) {
 			printf("[!] Lua chon khong hop le. Vui long chon lai!\n");
             while(getchar() != '\n');
-            continue;
 		}
 	
 		if(chon == 1) {
@@ -26,7 +25,6 @@ int main() {
 			if (scanf("%lld", &soTienRut) != 1) {
     			printf("So tien khong hop le!\n");
     			while(getchar() != '\n');
-    			continue;
 			}
 			
 			if (soDu == 0) {
