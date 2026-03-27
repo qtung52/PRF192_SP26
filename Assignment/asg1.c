@@ -21,9 +21,9 @@ int main() {
 
   const char *filename = "products.bin";
   int choice, numProducts;
-
+  
   do {
-    printf("\n-- product management system --\n");
+    printf("\n-- Product Management System --\n");
     printf("1. Write Products\n");
     printf("2. Append Products\n");
     printf("3. Read Products\n");
@@ -188,13 +188,13 @@ void modifyProduct(const char *filename) {
       found = 1;
       printf("Product found. Enter new details:\n");
       printf("New Product Name: ");
-      scanf(" %[^\n]", &p.product_name);
+      scanf(" %[^\n]", p.product_name);
       printf("New Price: ");
       scanf("%f", &p.price);
       printf("New Quantity: ");
       scanf("%d", &p.quantity);
 
-      fseek(fp, -sizeof(Product), SEEK_CUR);
+      fseek(fp, -(long)sizeof(Product), SEEK_CUR);
       fwrite(&p , sizeof(Product), 1, fp);
       
       printf("\nProduct updated successfully.\n");
@@ -203,7 +203,7 @@ void modifyProduct(const char *filename) {
   }
   
   if(found == 0) {
-    printf("Product ID %d not found.\n");
+    printf("Product ID %d not found.\n", findId);
   }
   
   fclose(fp);
